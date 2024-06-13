@@ -63,7 +63,6 @@ export default function App() {
 
   const getAddress = async (latitude, longitude, setAddress) => {
     try {
-      console.log("hola")
       const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_MAPS_KEY}`);
       const json = await response.json();
       if (json.results && json.results.length > 0) { 
